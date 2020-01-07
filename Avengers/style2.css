@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Ubuntu','Arial',sans-serif;
+    background-color: rgb(53, 54, 60);
+    text-rendering: optimizeLegibility;
+}
+h1
+{
+    font-size:50px;
+    color:rgba(193, 148, 148, 0.47);
+    text-align: center;
+}
+.fix{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(53, 54, 60, 0.83);
+}
+
+.roll img
+{
+    height:40px;
+    width: 35px;
+    border-radius: 50%;
+}
+.roll
+{
+    color:rgba(193, 148, 148, 0.47);
+    padding-bottom: 10px;
+    border-bottom: 5px solid rgb(56, 50, 93);
+    text-decoration: none;
+    
+}
+.roll li{
+    color: rgb(172, 180, 179);
+    font-weight: 200;
+    font-size: 60%;
+    float:right;
+    text-decoration: none;
+    display: inline-block;
+    list-style:none;
+    margin-top: -6vh;
+    margin-left: 1px;
+    border:2px solid rgba(82, 82, 82, 0.96);
+    border-radius: 50px;
+    padding: 5px;
+    margin-right: 10px;
+}
+.roll a:link,
+.roll a:active{
+    text-decoration: none;
+    color: rgb(172, 180, 179);   
+}
+.roll a:hover,
+.roll a:visited{
+    text-decoration: none;
+    color: rgba(144, 68, 68, 0.77);  
+    -webkit-transition: color .2s;  
+    transition: color .2s;
+    border-color: rgba(100, 68, 68, 0.99);
+  
+}
+.corr{
+    padding: 20px;
+    font-weight: 400;
+    font-family: 'Bookman';
+    background-color: rgba(37, 45, 57, 0.72);
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(41, 78, 114, 0.63)),to(rgba(227, 109, 109, 0.13))), url(files/avengers-streched.jpg);
+    background-image: linear-gradient(rgba(41, 78, 114, 0.63),rgba(227, 109, 109, 0.13)), url(files/avengers-streched.jpg);
+    background-position: center;
+    background-size: cover;
+      font-size: 3vh;
+    color: rgba(220, 222, 224, 0.92);
+    margin-top: 10vh;
+}
+.last{
+   background-color: rgba(38, 36, 36, 0.86);
+   height:23vh;
+   width: 100%;
+}
+.last img{
+    height:70%;
+    width: auto;
+    padding-top: 1vh;
+    padding-left: 1vh;
+    border-radius: 100%;
+}
+.last1{
+    padding-left: 1vh;
+    font-size: 3vh;
+    color: rgba(44, 134, 99, 0.81);
+    margin-top: -2.5vh;
+}
+.store img{
+    float:right;
+    border-radius: 20px;;
+    height: 20vh;
+    margin-top: -17vh;
+    margin-right: 2vh;
+}
+
+.colo1{
+    color: rgba(64, 154, 64, 0.56);
+    padding-bottom: 10px;
+    font-size: 120%;
+}
+.colo2{
+    color: rgba(160, 160, 190, 0.6);
+     padding-bottom: 10px;
+    font-size: 120%;
+}
+.colo3{
+    color: rgba(19, 19, 85, 0.92);
+     padding-bottom: 10px;
+    font-size: 120%;
+}
+.colo4{
+    color:rgba(211, 37, 37, 0.72);
+     padding-bottom: 10px;
+    font-size: 120%;
+}
+.colo5{
+    color: rgba(0, 0, 0, 0.57);
+     padding-bottom: 10px;
+    font-size: 120%;
+}
+.a{
+    font-family:'Comic Sans MS';
+    border-right:2px solid rgba(30, 22, 42, 0.41);
+    text-align: center;
+}
+.ab{
+    font-family:'Comic Sans MS';
+}
+

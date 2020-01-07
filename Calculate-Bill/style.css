@@ -1,0 +1,554 @@
+
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+header {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 10%;
+    overflow: hidden;
+}
+
+.name,
+.reset {
+    display: inline-block;
+}
+.name {
+    margin-left: 42%;
+    margin-right: 58%;
+    font-size: 7vh;
+    position: relative;
+    vertical-align: text-top;
+    margin-top: -8vh;
+    color: #6b6b7e;
+}
+.tm {
+    font-size: 2vh;
+}
+.date{
+    margin-right: 4vh;
+}
+.month,
+.day,
+.year{
+    float: right;
+    font-size: 150%;
+    font-weight: 500;
+    margin-right: 1.5vh;
+    margin-top: 4vh;
+    color: rgba(0, 0, 0, 0.37);
+}
+.dropdown {
+    float: left;
+}
+
+.buttonimg{
+    margin-top: 5%;
+    margin-left: 18%;
+    height: 8vh;
+    width: 8vh;
+    border-radius: 100vh;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+}
+
+.buttonimg:hover {
+    opacity: 0.7;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.dropdown:hover .buttonimg{
+    opacity: 0.7;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.dropbtn {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: 4vh;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*
+    ending
+*/
+
+.end {
+    background-color: grey;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+    position:relative;
+}
+.cname {
+    margin-bottom: -5vh;
+    padding-top: 2vh;
+    margin-left: 5vh;
+    font-size: 5vh;
+    font-weight: 700;
+}
+.logos {
+    float: right;
+    display: inline-flex;
+}
+.logo1,
+.logo2,
+.logo3 {
+    height: 6vh;
+    cursor: none;
+}
+.logo1 {
+    background-color: #4ab3f4;
+    border-radius: 1vh;
+}
+.logo2 {
+    background-color: #3578e5;
+    border-radius: 1vh;
+}
+.logo3 {
+    background-color: #c32aa3;
+    border-radius: 1vh;
+}
+
+/*
+
+   Items
+
+*/
+
+.items {
+    padding: 0;
+    padding-top: 1vh;
+    background-color: rgba(209, 209, 209, 0.37);
+    overflow: hidden;
+}
+.list {
+    width: ;
+    list-style: none;
+    padding-bottom: 0;
+    margin: 0 2.5%;
+}
+.list li {
+    display: block;
+    width: 19%;
+    display: inline-block;
+}
+.itempic {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.itempic img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+.itempic img:hover {
+    transform: scale(1.1);
+    padding: 0;
+    cursor: cell;
+}
+
+/*
+   Instructions
+*/
+.instruct{
+    background-color: white;
+    text-align: center;
+    color: #093D72;
+    display: block;
+    font-size: 120%;
+    padding-bottom: 2%;
+    font-family: Berlin Sans FB;
+}
+
+
+/*
+   breakline
+*/
+.breaks{
+    color: aqua;
+    background-color: #585849;
+}
+
+
+/*
+   Calculator
+*/
+
+.calculator{
+    text-align: center;
+    font-size: 160%;
+    font-weight: 900;
+    color: rgba(16, 37, 56, 0.82);
+}
+.budget{
+    float: right;
+    font-size: 150%;
+    margin-right: 5%;
+    font-family: 'Bahnschrift';
+}
+.enterbud{
+    text-align: center;
+    font-size: 120%;
+    width: 20%;
+    background-color: rgba(167, 167, 167, 0.29);
+    color: rgb(57, 63, 69);
+    border: 0;
+}
+.enterbud:focus{
+    outline: none;
+}
+.addrem,
+.removebudg{
+    display: none;
+}
+
+.donebtnb{
+    margin-bottom: 2vh;
+    cursor: pointer;
+    font-size: 4vh;
+    border-radius: 4vh;
+    border: 1px solid #3b3b45;
+    background-color: rgba(0, 0, 0, 0.56);
+    color: rgba(255, 255, 255, 0.85);
+    margin-left: 47.2%;
+}
+.donebtnb:hover{
+    color: rgba(0, 0, 0, 0.56);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.go{
+    font-size: 4vh;
+    background-color: #2f795a;
+    color: rgba(255, 255, 255, 0.87);
+    border: 0;
+}
+.go:hover{
+    background-color: rgba(245, 245, 245, 0.93);
+    color: #1f6560;
+    cursor: pointer;
+}
+
+/*
+
+   Expense List
+
+*/
+
+.expense{
+    font-size: 4.5vh;
+    display: inline-flex;
+    width: 100%;
+}
+.exp1,
+.amt1{
+    width: 50%;
+    margin-bottom: 3px;
+    color: rgba(34, 43, 51, 0.94);
+}
+.exp1{
+    background-color: rgba(217, 217, 217, 0.28);
+    margin-left: 24%;
+    padding-left: 1%;
+    font-family: 'comic sans ms'
+}
+.amt1{
+    background-color: rgba(217, 217, 217, 0.28);
+    margin-right: 23%;
+    padding-right: 6px;
+    text-align: right;
+    cursor:default;
+    transition: display .5s,margin-right .5s;
+}
+.exp1:hover + .amt1{
+    margin-right: 21%;
+}
+.exp1:hover +.amt1 .crossicon{
+    display: inline-block;
+}
+.amt1:hover{
+    margin-right:20%;
+}
+
+.crossicon{
+    background-color: white;
+    height: 20px;
+    width:20px;
+    border-radius: 2vh;
+    cursor: pointer;
+    margin-left: -2vh;
+    display:none;
+}
+.amt1:hover .crossicon{
+    display: inline-block;
+}
+
+
+
+/**
+    Onclicking done button
+    Results
+**/
+.rowa{
+    font-size: 4.5vh;
+    display: inline-flex;
+    width: 100%;
+}
+.result{
+    margin-top: 1.2%;
+    margin-bottom: 5vh;
+}
+.cola,
+.monthlybudg,  
+.yearlybudg,
+.monthlyexp,
+.yearlyexp,
+.loanval,
+.loanbudg,
+.budgexp{
+    width: 50%;
+    margin-bottom: 2.5vh;
+}
+.resulthead{
+    text-align: center;
+    font-size: 5vh;
+    font-family: 'Copperplate Gothic';
+    font-weight: bolder;
+}
+.resultline{
+    margin-left: 20%;
+    margin-right: 23%;
+    background-color: black;
+}
+.cola{
+    margin-left: 20%;
+    padding-left: 1%;
+    font-weight: 600;
+    color: rgb(36, 36, 36);
+    font-family: 'Arial Rounded MT';
+}
+.monthlybudg,  
+.yearlybudg,
+.monthlyexp,
+.yearlyexp,
+.loanval,
+.loanbudg,
+.budgexp{
+    margin-right: 23%;
+    padding-right: 6px;
+    text-align: right;
+    font-family: 'Digiface';
+}
+
+.red{
+    color: rgba(204, 9, 9, 0.62);
+}
+.green{
+    color: rgba(0, 96, 7, 0.65);
+}
+.blue{
+    color: rgba(17, 9, 204, 0.62);    
+}
+
+
+
+/*
+
+   Media Queries
+
+*/
+
+
+
+
+/*
+    done- 1000px,850px,
+*/
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px)
+{
+    .name{
+        margin-left: 38%;
+    }
+}
+
+@media only screen and (max-width: 850px)
+{
+    header{
+        padding-top: 1vh;
+    }
+    .date{
+        display: none;
+    }
+    .buttonimg{
+        height: 60px;
+        width: 60px;
+        overflow: hidden;
+    }
+    .dropdown-content{
+        margin-top: -1%;
+        font-size: 14px;
+    }
+    .name{
+        margin-left: 36%;
+        font-size: 60px;
+        margin-top: -9%;
+    }
+    
+    
+    
+    .lists{
+        font-size: 2vh;
+    }
+}
+
+@media only screen and (max-width: 700px)
+{
+    .buttonimg{
+        display: none;
+    }
+    header{
+        padding-top: 7vh;
+    }
+    .name{
+        margin-left: 32%;
+    }
+    .instruct{
+        font-size: 16px;
+        padding-left: 4px;
+        padding-right: 4px;
+        border-top: 2px solid black;
+    }
+    .list{
+        margin: 0;
+        width: 100%;
+        margin-left: -5.5vh;
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    .name{
+        margin-left: 31%;
+        margin-top: -11%;
+    }
+}
+
+@media only screen and (max-width: 510px)
+{
+    header{
+        margin-top: -9px;
+        margin-bottom: -8px;
+    }
+    .name{
+        margin-left: 30%;
+        font-size: 50px;
+    }
+    .instruct br{
+        display: none;
+    }
+    .list{
+        margin: 0;
+        width: 100%;
+        margin-left: -6vh;
+    }
+    .budgetline{
+        font-size: 80%;
+        display: inline-flex;
+        
+    }
+    .budget{
+        padding-left: 80px;
+    }
+    .go{
+        margin-left: -100px;
+    }
+}
+
+
+@media only screen and (max-width: 440px)
+{
+    .name{
+        margin-left: 28%;
+        margin-top: -13%;
+    }
+    .budget{
+        padding-left: 60px;
+    }
+    .go{
+        margin-left: -90px;
+    }
+}
+
+
+@media only screen and (max-width: 376px)
+{
+    .name{
+        margin-top:-48px;
+        margin-left: 26%;
+        margin-bottom: 4px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

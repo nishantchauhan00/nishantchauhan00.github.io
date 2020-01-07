@@ -1,0 +1,193 @@
+<!--
+         'No item selected' on clicking "Done" button without selecting anything
+
+
+
+
+-->
+<!Doctype html>
+<html>
+ <head>
+   <link href="style.prefixed.css" rel="stylesheet" type="text/css">
+   <link href="files/032%20grid.css" rel="stylesheet" type="text/css">
+   <title>Pascaline - AEY Inc.</title>
+   <link href="files/calculator-icon.png" rel="shortcut icon" type="image/png">
+ </head>
+
+ <body>
+   <header class="top">
+      <div class="dropdown">
+       <button class="dropbtn"><img src="files/3rowbutton.PNG" class="buttonimg">
+       </button>
+       <div class="dropdown-content">
+        <a href="#home">Home</a>
+        <a href="#">About</a>
+        <a href="#">Settings</a>
+       </div>
+     </div> 
+     <div class="date">
+         <div class="year"></div>
+          <div class="day"></div>
+         <div class="month"></div>
+     </div>
+     <div class="name">Pascaline<sup class="tm">TM</sup></div> 
+   </header>
+    
+  <!--       this container contains --- 10pics, selected items lists, done button                     -->
+  <div class="container">     
+     <div class="instruct">
+         Use this tool to calculate total monthly expenses for you and the family members.<br>
+         Input your monthly Budget.
+         Then Click on the pictures according to your expenses.<br> Single Click on any expense will input the expense for a single person.<br>We will calculate the total annual & monthly expense, loan and other details.
+     </div>
+     
+     
+     
+    <!--
+
+         items list
+
+     -->   
+     
+    <section class="items">
+     <ul class="list">
+         <li>
+             <figure class="itempic">
+                 <img src="files/items/item-1.jpg" class="pic1">
+             </figure>
+         </li>
+         <li>
+             <figure class="itempic">
+                 <img src="files/items/item-2.jpg" class="pic2">
+             </figure>
+         </li>
+         <li>
+             <figure class="itempic">
+                 <img src="files/items/item-3.jpg" class="pic3">
+             </figure>
+         </li>
+         <li>
+             <figure class="itempic">
+                 <img src="files/items/item-4.jpg" class="pic4">
+             </figure>
+         </li>
+          <li>
+             <figure class="itempic">
+                 <img src="files/items/item-5.jpg" class="pic5">
+             </figure>
+         </li>
+     </ul>
+       
+     <ul class="list">
+         <li>
+             <figure class="itempic">
+                 <img src="files/items/item-6.jpg" class="pic6">
+             </figure>
+         </li>
+         <li>
+             <figure class="itempic">
+                 <img src="files/items/item-7.jpg" class="pic7">
+             </figure>
+         </li>
+         <li>
+             <figure class="itempic">
+                 <img src="files/items/item-8.jpg" class="pic8">
+             </figure>
+         </li>
+          <li>
+             <figure class="itempic">
+                 <img src="files/items/item-9.jpg" class="pic9">
+             </figure>
+         </li>
+          <li>
+             <figure class="itempic">
+                 <img src="files/items/item-10.jpg" class="pic10">
+             </figure>
+         </li>
+     </ul>
+     
+   </section>  
+     <!--
+            break
+      -->
+   <br>
+   <hr size=4% width=96% class="breaks"> 
+   <br> 
+    
+     <!--
+            calculations     
+      -->
+    <section class="calculator">Calculator</section> 
+    <div class="budgetline">
+        <div class="col span-1-of-2"><div class="budget">Monthly&nbsp;Budget</div></div>
+        <div class="col span-1-of-2"><input type="number" class="enterbud" placeholder="0"></div>
+         <button class="go">GO</button>
+    </div> 
+    
+     
+     <br>
+     <!--
+               Expenses here
+    
+    <span class="expense clearfix">
+         <div class="exp1"></div>
+         <div class="amt1">00&nbsp;&nbsp;<img src="files/ios-close.svg" class="crossicon"></div>
+     </span> 
+
+
+     -->
+     
+     
+  
+    
+     <div class="lists">
+     <!--
+       
+          Add data before it
+
+     -->
+     <div class="forjs"><br></div>
+     </div>
+     
+         
+         
+   </div>
+    
+     <!--
+
+                        button code 
+        <div class="donebtna"><button class="donebtnb">Done</button></div><br>
+
+
+
+                               result code
+          .monthlybudg,.yearlybudg,.monthlyexp,.yearlyexp,.loanval,.loanbudg,.budgexp
+
+   <div class="result">
+       <br><div class="resulthead">Calculations</div><br>
+       <hr size=8% width=57% class="resultline">
+       <span class="rowa"><div class="cola">Monthly Budget</div> <div class="monthlybudg">0000</div></span>
+       <span class="rowa"><div class="cola">Yearly Budget</div> <div class="yearlybudg">00</div></span>
+       <span class="rowa"><div class="cola">Monthly Expense</div> <div class="monthlyexp">0000</div></span>
+       <span class="rowa"><div class="cola">Yearly Expense</div> <div class="yearlyexp">0000</div></span>
+       <span class="rowa"><div class="cola">Loan Needed(Monthly)</div> <div class="loanval">0000</div></span>
+       <span class="rowa"><div class="cola">Budget-to-Expense Ratio</div> <div class="budgexp">0.6</div></span>
+       <span class="rowa"><div class="cola">Loan-to-Budget Ratio(in %)</div> <div class="loanbudg">-12%</div></span>
+   </div> 
+   --> 
+     
+     
+   <footer class="end">
+       <div class="cname"><span title="It doesn&rsquo;t stand for anything. Like IBM. Does IBM stand for anything?">AEY Inc.</span></div>
+     <div class="logos" id="home">
+         <img src="files/logo-twitter.svg" class="logo1">&nbsp;&nbsp;&nbsp;
+         <img src="files/logo-facebook.svg" class="logo2">&nbsp;&nbsp;&nbsp;
+         <img src="files/logo-instagram.svg" class="logo3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     </div>
+     <br><br><br>
+   </footer>
+ </body>
+    
+ <script src="script.js"></script>
+    
+</html>

@@ -1,0 +1,335 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    background-color: rgba(78, 83, 101, 0.87);
+    color: white;
+}
+.heading{
+    background-color: rgba(40, 116, 240, 0.83);
+    color: #f0f0f0;
+    position: relative;
+    text-align: center;
+    font-size: 250%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    display:block;
+    position: relative;
+    border-bottom: 0;
+}
+.reset:link,
+.reset:active{
+    text-decoration: none;
+    color: rgba(244, 244, 244, 0.93);
+    font-size: 70%;
+    font-family: 'PT Sans', sans-serif;
+    float: right;
+    padding-right: 2%;
+    padding-top: 4px;
+}
+.reset:hover,
+.reset:visited{
+    color: rgba(255, 249, 249, 0.58);
+    cursor: pointer;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    -webkit-transition: color .4s,-webkit-text-decoration-line .4s;
+    transition: color .4s,-webkit-text-decoration-line .4s;
+    transition: color .4s,text-decoration-line .4s;
+    transition: color .4s,text-decoration-line .4s,-webkit-text-decoration-line .4s;
+}
+.lower{
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(157, 178, 217, 0.76)),to(rgba(102, 105, 128, 0.9))),url(files/back.jpg);
+    background-image: linear-gradient(rgba(157, 178, 217, 0.76),rgba(102, 105, 128, 0.9)),url(files/back.jpg);
+    background-position:center; 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height:89.50vh;
+    border-top: 0;
+}
+
+
+/*
+         Player A
+*/
+.playa{
+    border: 2px solid black;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    color: black;
+    height: 60vh;
+    margin-top: 7vh;
+    background-color: white;
+    opacity: 0.5;
+    font-size: 3vh;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+.playerna{
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 180%;
+}
+.scorea{
+    font-size: 160%;
+    padding-left: 2%;
+    padding-top: 13%;
+    color: rgba(14, 59, 98, 0.72);
+}
+.currenta{
+    padding-top: 5%;
+    text-align: center;
+    font-size: 380%;
+    color: #ea1717;
+    font-family: 'Ubuntu', sans-serif;
+}
+.imga{
+    height: 37%;
+    padding-top: 4%;
+    padding-left: 21%;
+}
+
+
+
+/*
+         Player B
+*/
+.playb{
+    border: 2px solid black;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    color: black;
+    height: 60vh;
+    margin-top: 7vh;
+    background-color: white;
+    opacity: .5;
+    font-size: 3vh;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+.playernb{
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 180%;
+}
+.scoreb{
+    font-size: 160%;
+    padding-top: 13%;
+    color: rgba(14, 59, 98, 0.72);
+}
+.currentb{
+    padding-top: 5%;
+    text-align: center;
+    font-size: 380%;
+    color: #ea1717;
+    font-family: 'Ubuntu', sans-serif;
+}
+.imgb{
+    height: 33%;
+    padding-top: 4%;
+    padding-left: 27%;
+}
+
+
+/*
+    GAME AREA
+*/
+.garea{
+    border: .1 px solid white;
+    background-color: rgba(103, 102, 126, 0.78);
+    opacity: .5;
+    margin-top: 7.5vh;
+    height: 70vh;
+}
+.dicea{
+    height:auto;
+    width: 68%;
+    float: left;
+    margin: 5% 13%;
+}
+
+.diceb{
+    height:auto;
+    width: 68%;
+    float: right;
+    margin: 5% 13%;
+}
+
+
+/*
+  ROLL AND HOLD
+*/
+
+.rolld{
+   float: right; 
+   font-size: 8vh;
+    border-radius: 10px;
+    margin-right: 4vh;
+    margin-top: 5vh;
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.holdd{
+    float: left;
+    font-size: 8vh; 
+    border-radius: 10px;
+    margin-left: 4vh;
+    margin-top: 5vh;
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.rolld:hover,
+.holdd:hover{
+    font-size: 9vh;
+    color: whitesmoke;
+    background-color: black;
+    -webkit-transition: font-size .4s,color .3s,background-color .4s;
+    transition: font-size .4s,color .3s,background-color .4s;
+}
+
+.scorea,
+.scorejsa,
+.scoreb,
+.scorejsb{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+/*
+  After game
+*/
+
+.rollda{
+    float: right; 
+   font-size: 8vh;
+    border-radius: 10px;
+    margin-right: 4vh;
+    margin-top: 5vh;
+    color: white;
+    background-color: black;
+}
+.holdda{
+    float: left;
+    font-size: 8vh; 
+    border-radius: 10px;
+    margin-left: 4vh;
+    margin-top: 5vh;
+    color: white;
+    background-color: black;
+}
+
+.diceab{
+    background-color: rgba(103, 102, 126, 0.37);
+    opacity: .7;
+}
+.playc{
+    background-color: rgba(255, 255, 255, 0.15);
+    opacity: .8;
+}
+.playd{
+    background-color: rgba(255, 255, 255, 0.15);
+    opacity: .8;
+}
+
+
+/*
+  Media queries
+        for my phone
+*/
+
+@media only screen and (max-width: 980px){
+    .heading{
+        font-size:450%;
+    }
+    
+    .playerna,
+    .playernb{
+        font-size: 70%;
+    }
+    .rolld,
+    .holdd,
+    .rollda,
+    .holdda{
+        font-size: 5vh;
+    }
+    .rolld:hover,
+    .holdd:hover{
+        font-size: 6vh;
+    }
+    .rolld,
+    .rollda{
+        margin-right: 2px;
+    }
+    .holdd,
+    .holdda{
+        margin-left: 2px;
+    }
+    .imga,
+    .imgb{
+        height: 13%;
+        padding-left: 16%;
+    }
+    .scorejsa,
+    .scorejsb{
+        font-size: 4vh;
+        padding-left: 20%;
+    }
+    .scorea,
+    .scoreb{
+        font-size: 2vh;
+        padding-left: 5%;
+    }
+    .scorea,
+    .scorejsa,
+    .scoreb,
+    .scorejsb{
+       display: block;
+    }
+    .currenta,
+    .currentb{
+        font-size: 170%;
+    }
+    .dicea,
+    .diceb{
+        height: 14vh;
+        width: auto;
+    }
+}
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+

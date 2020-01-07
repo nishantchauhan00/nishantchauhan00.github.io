@@ -1,0 +1,108 @@
+/*
+
+
+
+@media only screen and (max-width: 360px){
+    .roll li{
+        margin-top: -5vh;
+        margin-right: 4px;
+    }
+    .roll{
+        font-size: 40%;
+        padding-bottom: 0;
+    }
+    .roll img
+    {
+    height:35px;
+    width: 30px;
+    border-radius: 50%;
+    }
+    .pc1{
+        top: 10%;
+    }
+    .letter,
+    .letterf {
+      font-size: 3vh;
+        float: right;
+        margin-top: -3vh;
+        margin-right: 2vh;
+    }
+    .letterf{
+        margin-right: 25vh;
+    }
+    .edit1{
+      float: left;  
+        margin-left: -2vh;
+    }
+    
+    .inp{
+        float: right;
+        margin-right: 24vh;
+    }
+    .bimg{
+        font-size: 4vh;
+    }
+    .filma{
+        font-size: 6vh;
+        text-align: center;
+    }
+    .filmb{
+        font-size: 4vh;
+    }
+}
+
+
+
+@media only screen and (max-width: 320px){
+    .roll li{
+        margin-top: -3vh;
+        margin-right: 4px;
+        font-size: 50%;
+    }
+    .roll{
+        font-size: 40%;
+        padding-bottom: 10vh;
+    }
+    .roll img
+    {
+    height:35px;
+    width: 30px;
+    border-radius: 50%;
+    }
+    .pc1{
+        top: 10%;
+    }
+    .letter,
+    .letterf {
+      font-size: 3vh;
+        float: right;
+        margin-top: -3vh;
+        margin-right: 2vh;
+    }
+    .letterf{
+        margin-right: 25vh;
+    }
+    .edit1{
+      float: left;  
+        margin-left: -2vh;
+    }
+    
+    .inp{
+        float: right;
+        margin-right: 24vh;
+    }
+    .bimg{
+        font-size: 4vh;
+    }
+    .filma{
+        font-size: 6vh;
+        text-align: center;
+    }
+    .filmb{
+        font-size: 4vh;
+    }
+}
+
+
+
+

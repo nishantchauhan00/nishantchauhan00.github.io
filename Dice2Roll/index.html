@@ -1,0 +1,81 @@
+<!--
+  ____
+ /\   \   
+/  \___\  
+\  /   / 
+ \/___/             
+
+Instruction:-
+1.Only 2 players can play this game.
+2.Both Players enter their names.
+3.Click on Roll button to roll both dices.
+4.The player can roll dices until he/she gets a even sum. 
+5.If the player rolls a even sum, his/her round score gets lost and its the next player's turn.
+6.But the player can hold his/her points which will be then added to the main score.
+7. The first player to reach target of 50 main points wins the game.
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOOM #764</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="files/032%20grid.css" rel="stylesheet" type="text/css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway:800|Ubuntu|ZCOOL+QingKe+HuangYou" rel="stylesheet" type="text/css">
+</head>
+    <body>
+        <h1 class="heading">DOOM&nbsp;#764
+           <a href="#" class="reset">Reset</a>
+        </h1>
+        
+        
+        
+        <section class="lower">
+            
+            
+            <div class="col span-1-of-5">
+                
+                <div class="playa playc playcc">
+                    <div class="playerna">PlayerA</div>
+                    <div class="scorea">Score&nbsp;&mdash;&nbsp;<div class="scorejsa"></div></div>
+                    <div class="currenta"></div>
+                    <img src="files/go.png" alt="Go" class="imga">
+                </div>
+            </div>
+            
+            
+            
+            <div class="col span-3-of-5">
+                <div class="garea diceab zz">
+                    <div class="col span-1-of-2"><img src="files/dice/dice-0.png" class="dicea"></div>
+                    <div class="col span-1-of-2"><img src="files/dice/dice-0.png" class="diceb"></div>
+                    
+                    <div>
+                    <div class="col span-1-of-2"><button class="rolld rollda aaa">Roll</button></div>
+                    <div class="col span-1-of-2"><button class="holdd holdda bbb">Hold</button></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+                                 
+            <div class="col span-1-of-5">
+                <div class="playb playd playdd">
+                    <div class="playernb">PlayerB</div>
+                    <div class="scoreb">&nbsp;Score&nbsp;&mdash;&nbsp;<div class="scorejsb"></div></div> 
+                    <div class="currentb"></div>
+                    <img src="files/wait.png" alt="WAIT" class="imgb">
+                </div>
+            </div>
+            
+            
+        </section>
+    </body>
+
+    <script src="dom.js"></script>
+    
+</html>

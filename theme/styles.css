@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.page{
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(57, 36, 36, 0.15)),to(rgba(126, 126, 126, 0.14))),url(files/deadpool2.PNG);
+    background-image: linear-gradient(rgba(57, 36, 36, 0.15),rgba(126, 126, 126, 0.14)),url(files/deadpool2.PNG);
+    background-position: center;
+    background-size: 100% 100%;
+    margin-top: 0;
+    height: 100vh;
+    width: auto;
+    text-align: center;
+    overflow: hidden;
+}
+.month,
+.day,
+.year{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; 
+    font-size: 8vh;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-left: 2vh;
+    margin-top: 25vh;
+}
+.month{
+    margin-left: -5vh;
+}
+.hours,
+.minutes,
+.seconds{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 8vh;
+    font-weight: 600;
+    color: white;
+    margin-left: 2vh;
+}
+.hours{
+    padding-left: 13vh;
+}
+.searchb{
+    margin-top: 9vh;
+    width: 55vh;
+    height: 6vh;
+    border-radius: 4vh;
+    border: 0;
+    font-size: 3.5vh;
+    text-align: center;
+    font-weight: 600;
+    color: rgba(24, 24, 25, 0.9);
+    background-color: rgba(248, 248, 248, 0.9);
+}
+.searchb:focus{
+    outline: none;
+}
+
+
+
+/*
+   dropdown button
+*/
+.dropdown {
+    float: left;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.buttonimg{
+    height: 8vh;
+    width: 8vh;
+    border-radius: 100vh;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition: -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    -webkit-filter: contrast(1000%);
+    filter: contrast(1000%);
+    -webkit-filter: saturate(.1);
+    filter: saturate(.1);
+}
+
+.buttonimg:hover{
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.dropdown:hover .buttonimg{
+    opacity: 0.7;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.dropbtn {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: 4vh;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-family: "Comic Sans MS",Times New Roman;
+}
+
+.dropdown-content a:hover {
+    display: block;
+    font-weight: 600;
+    
+}
+.dropdown-content a:hover img{
+    height: 2.8vh;
+    width: auto;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.yt,
+.fb,
+.ins,
+.rdt,
+.twt,
+.whts,
+.amz,
+.drop{
+    height: 2.5vh;
+    width: auto;
+    float: right;
+    border-radius: 3px;
+}
+
+
+.cname {
+    bottom: 1.5vh;
+    right: 2vh;
+    position: absolute;
+    font-size: 5vh;
+    font-weight: 700;
+    cursor: none;
+}
+
+
+
+/*
+
+      media queries
+*/
+
+@media only screen and (max-width: 768px) {
+    .page{
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(57, 36, 36, 0.15)), to(rgba(126, 126, 126, 0.14))), url(files/poolphone.png);
+        background-image: linear-gradient(rgba(57, 36, 36, 0.15), rgba(126, 126, 126, 0.14)), url(files/poolphone.png);
+        position: fixed;
+    }
+    .searchb{
+        width: 70vw;
+        height: 7vh;
+    }
+    .l1,
+    .l2{
+        display: inline-block;
+        font-size: .1vh;
+    }
+    .l1{
+        margin-right: 4vw;
+        display: none;
+    }
+    .l2{
+        padding-right: 1vh;
+    }
+    .dropbtn{
+        margin-left: 1vh;
+        margin-top: 1.5vh;
+    }
+    .dropdown-content{
+        opacity: 0.85;
+    }
+}
+
+@media only screen and (max-width: 480px){
+     .l2{
+         margin-left: -15vh;
+        padding-right: 0vh;
+    }
+    .dropdown-content a{
+        font-size: 2.2vh;
+    }
+}
