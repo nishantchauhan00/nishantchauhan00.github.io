@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Xenzia</title>
+    <link href="./assets/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page">
+        <div class="game_container">
+            <canvas id="game_box"></canvas>
+        </div>
+        <div class="score_board">
+            <div class="title"> Snake Xenzia </div>
+            <div class="score_box">
+                Score -&nbsp;<div class="score">00</div>
+            </div>
+            <div class="snake_len">
+                Snake Length -&nbsp;<div class="slen">00</div>
+            </div>
+            <div class="creator">
+                CREATED BY nishant
+            </div>
+        </div>
+    </div>
+
+    <!-- game over card -->
+    <div class="card">
+        <div class="card-content">
+            <h1>Game Over</h1>
+            <p class="final_score"> Score - 0</p>
+        </div>
+        <a class="try_again" href="javascript:window.location.reload(true)">
+            Try Again!
+        </a>
+    </div>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
