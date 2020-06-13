@@ -2,15 +2,24 @@ function game() {
     canvas = document.getElementById("game_box");
     score_chart = document.querySelector(".score");
     snake_len = document.querySelector(".slen");
+    up_arrow = document.querySelector(".up");
+    left_arrow = document.querySelector(".left");
+    right_arrow = document.querySelector(".right");
+    down_arrow = document.querySelector(".down");
+
     // context is an object that exposes an API for drawing on the 
     // canvas. Currently, only the CanvasRenderingContext2D object is 
     // supported, and for that the contextId is '2d'. The result of this 
     // call will be null if the given context ID is not supported
     gamec_context = canvas.getContext('2d');
+    parent_canvas = document.querySelector(".game_container");
+    gamec_context.canvas.width = parent_canvas.clientWidth;
+    gamec_context.canvas.height = parent_canvas.clientHeight;
     score = 0;
     game_over = false;
     canvas_width = canvas.width;
     canvas_height = canvas.height;
+    toggle_flash = 0;
 
     snake = {
         len: 4,
@@ -19,7 +28,7 @@ function game() {
             X: 0,
             Y: 0
         },
-        size: 10,
+        size: 27,
         direction: "right",
         createSnake: function () {
             for (let i = this.len; i > 0; --i) {
@@ -59,12 +68,10 @@ function game() {
             var boundary_x = Math.round((canvas_width - 2 * this.size) / this.size);
             var boundary_y = Math.round((canvas_height - 2 * this.size) / this.size);
             // console.log(boundary_x, boundary_y);
-            if (this.coords[0].y < 0 || this.coords[0].x < 0 || this.coords[0].x > boundary_x || this.coords[0].y > boundary_y) {
-                game_over = true;
-                return;
-            }
+            
             var headX = this.coords[0].x,
                 headY = this.coords[0].y;
+            // check for snake head hit ball
             if (this.ball_coords.X - 1 <= headX && headX <= this.ball_coords.X &&
                 this.ball_coords.Y - 1 <= headY && headY <= this.ball_coords.Y) {
                 updateBallCoords();
@@ -75,6 +82,13 @@ function game() {
             } else {
                 this.coords.pop();
             }
+            // check if snake hit itself
+            this.coords.slice(1, -1).forEach(el => {
+                if (el.x == headX && el.y == headY) {
+                    game_over = true;
+                    return;
+                }
+            });
             var nextX, nextY;
             if (this.direction === "up") {
                 nextX = headX;
@@ -93,6 +107,10 @@ function game() {
                 x: nextX,
                 y: nextY
             }, ...this.coords];
+            if (this.coords[0].y < 0 || this.coords[0].x < 0 || this.coords[0].x > boundary_x || this.coords[0].y > boundary_y) {
+                game_over = true;
+                return;
+            }
         }
     };
 
@@ -100,15 +118,37 @@ function game() {
     updateBallCoords();
     snake_len.innerText = snake.len;
 
+    function arrowDefault() {
+        up_arrow.setAttribute('style', `filter: invert(0.5);`);
+        left_arrow.setAttribute('style', `filter: invert(0.5);`);
+        right_arrow.setAttribute('style', `filter: invert(0.5);`);
+        down_arrow.setAttribute('style', `filter: invert(0.5);`);
+    }
+
     function changeDirection(event) {
+        if (toggle_flash === 0) {
+            // // for flash arrow remain same
+            arrowDefault();
+        }
         if (event.key === "ArrowUp") {
             snake.direction = "up";
+            up_arrow.setAttribute('style', `filter: invert(0);`);
         } else if (event.key === "ArrowDown") {
             snake.direction = "down";
+            down_arrow.setAttribute('style', `filter: invert(0);`);
         } else if (event.key === "ArrowLeft") {
             snake.direction = "left";
+            left_arrow.setAttribute('style', `filter: invert(0);`);
         } else if (event.key === "ArrowRight") {
             snake.direction = "right";
+            right_arrow.setAttribute('style', `filter: invert(0);`);
+        } else if (event.key === "t") {
+            toggle_flash = toggle_flash === 0 ? 1 : 0;
+        }
+
+        if (toggle_flash === 1) {
+            // // for flashing once
+            setTimeout(arrowDefault, 300);
         }
     };
     document.addEventListener("keydown", changeDirection);

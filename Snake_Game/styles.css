@@ -20,11 +20,10 @@ body {
 }
 
 #game_box {
-    /* margin: 10px; */
     background-color: black;
-    width: 100%;
-    height: 100%;
-    /* overflow: hidden; */
+    z-index: 1;
+    /* width: 100%; */
+    /* height: 100%; */
 }
 
 .score_board {
@@ -63,20 +62,48 @@ body {
     position: absolute;
     text-align: center;
     font-size: 30px;
-    top: 250px;
+    top: 220px;
     left: 0;
     right: 0;
     display: inline;
 }
 
 .snake_len {
-    top: 330px;
+    top: 300px;
 }
 
 .score,
 .slen {
     font-weight: 700;
     display: inline-block;
+}
+
+.arrows {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    right: 0;
+}
+
+.up,
+.down,
+.left,
+.right {
+    filter: invert(.5);
+}
+
+.left {
+    margin-right: 33.6px;
+}
+
+.right {
+    margin-left: 33.6px;
+}
+
+.toggle {
+    font-weight: 700;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .creator {
@@ -117,7 +144,7 @@ body {
 }
 
 .final_score {
-    margin:  20px 0 30px 0;
+    margin: 20px 0 30px 0;
     font-weight: bolder;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
