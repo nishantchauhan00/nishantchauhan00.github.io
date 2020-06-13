@@ -185,7 +185,7 @@ function gameLoop() {
     if (game_over) {
         clearInterval(loop);
         document.querySelector(".final_score").innerText = `Score - ${score}`;
-        document.querySelector(".page").setAttribute('style', "opacity: 0.3; z-index: -5;");
+        document.querySelector(".page").setAttribute('style', "opacity: 0.5; z-index: -5;");
         document.querySelector(".card").setAttribute('style', "z-index: 5;");
         return;
     }

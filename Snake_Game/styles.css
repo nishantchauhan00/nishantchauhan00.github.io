@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: row;
     background-color: black;
+    transition: all 0.25s;
 }
 
 .game_container {
