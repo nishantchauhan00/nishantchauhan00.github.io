@@ -59,20 +59,26 @@ body {
 }
 
 .score_box,
-.snake_len {
+.snake_len, 
+.max_score_box {
     position: absolute;
     text-align: center;
     font-size: 30px;
-    top: 220px;
+    top: 190px;
     left: 0;
     right: 0;
     display: inline;
 }
 
-.snake_len {
-    top: 300px;
+.max_score_box{
+    top: 240px;
 }
 
+.snake_len {
+    top: 340px;
+}
+
+.max_score,
 .score,
 .slen {
     font-weight: 700;

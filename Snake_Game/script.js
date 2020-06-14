@@ -1,4 +1,25 @@
+// time in which canvas rerenders and coords get updated
+snake_speed = {
+    speed: 160,
+    snake_speed_max: 90,
+    single_change: 3
+}
+let cookies = document.cookie.split(';');
+
+let max_score = 0;
+if (cookies) {
+    var fetched_max_score = (cookies.map(cookie => {
+        if (cookie.startsWith("max_score")) {
+            return cookie.split("=")[1]
+        }
+    }))[0];
+    if (fetched_max_score) {
+        max_score = fetched_max_score;
+    }
+}
+
 function game() {
+    max_score_box = document.querySelector(".max_score");
     canvas = document.getElementById("game_box");
     score_chart = document.querySelector(".score");
     snake_len = document.querySelector(".slen");
@@ -68,17 +89,19 @@ function game() {
             var boundary_x = Math.round((canvas_width - 2 * this.size) / this.size);
             var boundary_y = Math.round((canvas_height - 2 * this.size) / this.size);
             // console.log(boundary_x, boundary_y);
-            
+
             var headX = this.coords[0].x,
                 headY = this.coords[0].y;
             // check for snake head hit ball
             if (this.ball_coords.X - 1 <= headX && headX <= this.ball_coords.X &&
                 this.ball_coords.Y - 1 <= headY && headY <= this.ball_coords.Y) {
                 updateBallCoords();
+                changeSpeed();
                 score++;
                 this.len++;
                 score_chart.innerText = score;
                 snake_len.innerText = this.len;
+                updateMaxScore();
             } else {
                 this.coords.pop();
             }
@@ -187,14 +210,33 @@ function gameLoop() {
         document.querySelector(".final_score").innerText = `Score - ${score}`;
         document.querySelector(".page").setAttribute('style', "opacity: 0.5; z-index: -5;");
         document.querySelector(".card").setAttribute('style', "z-index: 5;");
+
+        const expire_time = 60 * 60 * 24 * 365;
+        document.cookie = `max_score=${max_score};max-age=${expire_time};`;
         return;
     }
     updateCoords();
     renderCanvas();
 }
 
+function updateMaxScore() {
+    if (max_score < score) {
+        max_score = score;
+        max_score_box.innerText = score;
+    }
+}
+
+function changeSpeed() {
+    if (snake_speed.speed > snake_speed.snake_speed_max) {
+        snake_speed.speed -= snake_speed.single_change;
+        clearInterval(loop);
+        loop = setInterval(gameLoop, snake_speed.speed);
+    }
+}
+
 var loop;
 document.addEventListener("DOMContentLoaded", function () {
     game();
-    loop = setInterval(gameLoop, 200);
+    max_score_box.innerText = max_score;
+    loop = setInterval(gameLoop, snake_speed.speed);
 }, true);
