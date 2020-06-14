@@ -3,31 +3,29 @@
         flex-direction: column !important;
     }
 
-    .game_container, .score_board {
+    .game_container,
+    .score_board {
         flex: 0.5;
     }
 
-    .title{
-        font-size: 30px;
+    .title {
+        margin-top: 5% !important;
+        font-size: 30px !important;
     }
 
-    .score_box{
-        font-size: 23px;
+    .score_box {
+        font-size: 23px !important;
     }
 
-    .spin_btn_txt {
-        font-size: 20px;
-    }
-    
-    .creator{
-        font-size: 14px;
+    .spin_btn_text {
+        font-size: 24px !important;
+        padding: 0.7rem 0.7rem !important;
     }
 
-    .score_box{
-        top: 130px;
+    .creator {
+        font-size: 14px !important;
     }
 
-    .spin_btn {
-        top: 210px;
-    }
+    .score_box {}
+
 }
