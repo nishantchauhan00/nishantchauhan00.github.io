@@ -1,29 +1,33 @@
-.mobile {
-    background-color: white;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-}
-
 @media screen and (max-width: 400px) {
-    * {
-        background-color: #fff;
-        color: black;
+    .page {
+        flex-direction: column;
     }
 
-    .mobile {
-        display: flex !important;
-        z-index: 6 !important;
-        opacity: 1 !important;
+    .game_container, .score_board {
+        flex: 0.5;
     }
 
-    .page,
-    .card {
-        display: none;
-        opacity: 0;
-        z-index: -6;
+    .title{
+        font-size: 30px;
+    }
+
+    .score_box{
+        font-size: 23px;
+    }
+
+    .spin_btn_txt {
+        font-size: 20px;
+    }
+    
+    .creator{
+        font-size: 14px;
+    }
+
+    .score_box{
+        top: 130px;
+    }
+
+    .spin_btn {
+        top: 210px;
     }
 }

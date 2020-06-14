@@ -25,9 +25,15 @@ function create() {
     let height = game.config.height;
     let width = game.config.width;
     this.wheel = this.add.image(width / 2, height / 2, 'wheel');
-    this.wheel.setScale(0.9);
-    this.pointer = this.add.image(width / 2, 40, 'pointer');
-    this.pointer.setScale(0.9);
+    if (width < 400) {
+        this.pointer = this.add.image(width / 2, 23, 'pointer');
+        this.wheel.setScale(0.43);
+        this.pointer.setScale(0.45);
+    } else {
+        this.pointer = this.add.image(width / 2, 43, 'pointer');
+        this.wheel.setScale(0.9);
+        this.pointer.setScale(0.9);
+    }
     this.rotate_audio = this.sound.add('rotate');
     // this.rotate_audio.setLoop(true);
     this.end_audio = this.sound.add('end');
@@ -41,27 +47,29 @@ function create() {
 function update() {}
 
 function spinner() {
-    let n = 10;
-    let x = (Math.floor(Math.random() * (n))) + 1;
-    let counter_audio = 0;
+
     if (!this.rotating_currently) {
+        let n = 10;
+        let x = (Math.floor(Math.random() * (n))) + 1;
+        let counter_audio = 0;
         this.rotating_currently = true;
         this.tweens.add({
             targets: this.wheel,
             duration: 3500,
             angle: 720 + x * (360 / n),
             ease: "Cubic",
-            onUpdate: () => {
+            onUpdate: (initialize) => {
                 counter_audio++;
-                if (counter_audio %9 === 0) {
+                let random_num = Math.floor(Math.random() * 20);
+                if (counter_audio % 7 === 0 && random_num < (3500 - Math.floor(initialize.elapsed)) / 100) {
                     this.rotate_audio.play();
                 }
             },
             onComplete: () => {
+                this.rotate_audio.stop();
                 this.score += n - x + 1;
                 this.score_selector.innerText = this.score;
                 this.rotating_currently = false;
-                // this.rotate_audio.stop();
                 this.end_audio.play();
             }
         });
