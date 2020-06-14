@@ -28,15 +28,16 @@ function create() {
     let scale, pointer_y;
     this.wheel = this.add.image(width / 2, height / 2, 'wheel');
     if (width < 450) {
-        console.log(h_w);
-        pointer_y =  h_w < 1.5 ? 24 : 15;
-        if(width < 370){
+        if(width >= 350 && width < 370){
             scale = h_w < 1.5 ? h_w * (0.4) : h_w * 0.1;
+        }else if(width <350){
+            scale = h_w < 1.5 ? h_w * (0.35) : h_w * 0.05;
         }else{
             scale = h_w < 1.5 ? h_w * (0.45) : h_w * 0.1;
         }
+        pointer_y = height/2 - scale*this.wheel.height/2 - 5;
     } else {
-        pointer_y = 43;
+        pointer_y = height/2 - this.wheel.height/2 + 30;
         scale = h_w * (1.05);
     }
     this.pointer = this.add.image(width / 2, pointer_y, 'pointer');
