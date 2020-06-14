@@ -37,7 +37,7 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-.score_box{
+.score_box {
     position: absolute;
     text-align: center;
     font-size: 30px;
@@ -47,12 +47,12 @@ body {
     display: inline;
 }
 
-.score{
+.score {
     font-weight: 700;
     display: inline-block;
 }
 
-.spin_btn{
+.spin_btn {
     position: absolute;
     text-align: center;
     font-size: 30px;
@@ -63,17 +63,22 @@ body {
     left: 0;
     right: 0;
 }
-.spin_btn_text{
+
+.spin_btn_text {
     background-color: #2378be;
-    color : rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.5s;
     padding: 5px 10px;
+    user-select: none !important;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
 }
-.spin_btn_text:hover{
+
+.spin_btn_text:hover {
     background-color: #1e69a7;
-    color : white;
+    color: white;
 }
 
 .creator {
@@ -84,4 +89,3 @@ body {
     left: 0;
     right: 0;
 }
-
