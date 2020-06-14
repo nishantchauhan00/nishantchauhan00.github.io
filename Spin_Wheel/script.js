@@ -22,18 +22,26 @@ function preload() {
 }
 
 function create() {
-    let height = game.config.height;
-    let width = game.config.width;
+    const height = game.config.height;
+    const width = game.config.width;
+    const h_w = height / width;
+    let scale, pointer_y;
     this.wheel = this.add.image(width / 2, height / 2, 'wheel');
-    if (width < 400) {
-        this.pointer = this.add.image(width / 2, 23, 'pointer');
-        this.wheel.setScale(0.43);
-        this.pointer.setScale(0.45);
+    if (width < 450) {
+        console.log(h_w);
+        pointer_y =  h_w < 1.5 ? 24 : 15;
+        if(width < 370){
+            scale = h_w < 1.5 ? h_w * (0.4) : h_w * 0.1;
+        }else{
+            scale = h_w < 1.5 ? h_w * (0.45) : h_w * 0.1;
+        }
     } else {
-        this.pointer = this.add.image(width / 2, 43, 'pointer');
-        this.wheel.setScale(0.9);
-        this.pointer.setScale(0.9);
+        pointer_y = 43;
+        scale = h_w * (1.05);
     }
+    this.pointer = this.add.image(width / 2, pointer_y, 'pointer');
+    this.wheel.setScale(scale*1.1);
+    this.pointer.setScale(scale);
     this.rotate_audio = this.sound.add('rotate');
     // this.rotate_audio.setLoop(true);
     this.end_audio = this.sound.add('end');

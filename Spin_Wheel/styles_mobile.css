@@ -1,6 +1,6 @@
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .page {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     .game_container, .score_board {
