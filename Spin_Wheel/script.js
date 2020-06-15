@@ -12,13 +12,27 @@ let config = {
     }
 };
 
+let sound_config = {
+    mute: false,
+    delay: 0,
+    volume: 0.7,
+    loop: false,
+    instance: 1
+}
+
 var game = new Phaser.Game(config);
 
 function preload() {
     this.load.image('pointer', './assets/pointer.png');
     this.load.image('wheel', './assets/wheel.png');
-    this.load.audio('rotate', "./assets/rotate_single.mp3");
-    this.load.audio('end', 'assets/end.mp3');
+    this.load.audio('rotate', [
+        "./assets/rotate_single_ogg.ogg",
+        "./assets/rotate_single.mp3"
+    ]);
+    this.load.audio('end', [
+        'assets/end.mp3',
+        'assets/end_ogg.ogg'
+    ]);
 }
 
 function create() {
@@ -26,7 +40,7 @@ function create() {
     const width = game.config.width;
     const screen_width = document.querySelector(".page").clientWidth;
     // const screen_height = document.querySelector(".page").clientHeight;
-    
+
     const h_w = height / width;
     let scale, pointer_y;
     this.wheel = this.add.image(width / 2, height / 2, 'wheel');
@@ -46,7 +60,7 @@ function create() {
     this.pointer = this.add.image(width / 2, pointer_y, 'pointer');
     this.wheel.setScale(scale * 1.1);
     this.pointer.setScale(scale);
-    this.rotate_audio = this.sound.add('rotate');
+    this.rotate_audio = this.sound.add('rotate', sound_config);
     // this.rotate_audio.setLoop(true);
     this.end_audio = this.sound.add('end');
 
