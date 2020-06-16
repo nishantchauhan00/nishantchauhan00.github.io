@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Jump</title>
+    <link href="./assets/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="./styles_mobile.css" media="screen and (max-width: 450px)" rel="stylesheet">
+    <link href="./styles.css" media="screen and (min-width: 450px)" rel="stylesheet">
+</head>
+
+<body>
+    <!-- mobile not allowed -->
+    <div class="mobile" style="display: none; opacity: 0; z-index: -6; ">
+        **NOT supported for this device**
+    </div>
+
+    <!-- game -->
+    <div class="page">
+        <div class="game_container" id="game_canvas_container">
+            <!-- canvas -->
+        </div>
+        <div class="score_board">
+            <div class="title"> Mario Jump </div>
+            <div class="score_box">
+                Score -&nbsp;<div class="score">00</div>
+            </div>
+            <!-- <div class="score_box max_score_box">
+                Max Score -&nbsp;<div class="max_score">00</div>
+            </div> -->
+            
+            <div class="creator">
+                CREATED BY nishant
+            </div>
+        </div>
+    </div>
+
+    <!-- game over card -->
+    <div class="card">
+        <div class="card-content">
+            <h1>Game Over</h1>
+            <p class="final_score"> Score - 0</p>
+        </div>
+        <a class="try_again" href="javascript:window.location.reload(true)">
+            Try Again
+        </a>
+    </div>
+    
+    <script type="text/javascript" src="./assets/phaser.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
