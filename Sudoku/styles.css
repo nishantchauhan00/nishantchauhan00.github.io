@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    transition: all 0.25s;
+}
+
+.game_container {
+    background-color: black;
+    flex: 0.5;
+    border: 10px dashed #237e23;
+    position: relative;
+
+}
+
+#game_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.big_box {
+    background-color: black;
+    position: absolute;
+    margin-bottom: 2px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.big_box_2 {
+    flex: 1;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.medium_box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.small_row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.small_box {
+    align-self: stretch;
+    flex: 1;
+    border: 1px solid black;
+    background-color: rgba(150, 150, 150, 0.993);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 35px;
+}
+
+.filled_small_box {
+    background-color: rgba(105, 105, 105, 0.993) !important;
+    font-weight: bold;
+}
+
+.input_box {
+    width: 30%;
+    height: 50%;
+    font-weight: bold;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.883);
+    border: none;
+    font-size: 35px;
+    outline: none;
+    text-align: center;
+    background-color: rgba(150, 150, 150, 0.993);
+    border-bottom: 3px solid #33333355;
+    transition: all 0.5s;
+}
+
+.input_box:focus {
+    border-bottom: 3px solid #333333;
+}
+
+.score_board {
+    flex: 0.5;
+    color: rgb(188, 201, 222);
+    padding: 20px;
+    text-align: center;
+    font-family: monospace;
+    position: relative;
+    background-color: #0a141d;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: 25px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.score_box {
+    text-align: center;
+    font-size: 30px;
+    left: 0;
+    right: 0;
+    display: inline;
+}
+
+.score {
+    font-weight: 700;
+    display: inline-block;
+}
+
+.filled,
+.remaining {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.filled {
+    top: 30%;
+}
+
+.remaining {
+    top: 40%;
+}
+
+.submit_solve, .new {
+    position: absolute;
+    text-align: center;
+    font-size: 30px;
+    top: 58%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+}
+
+.new{
+    top: 71%;
+}
+
+.submit_text, .solve_text, .new_text {
+    background-color: #2378be;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s;
+    padding: 0.8rem 1rem;
+    user-select: none;
+    width: 15%;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+}
+
+
+.submit_text{
+    margin-right: 20px;
+} 
+
+.solve_text {
+    margin-left: 20px;
+}
+
+.new_text:hover,
+.submit_text:hover,
+.solve_text:hover {
+    background-color: #1e69a7;
+    color: white;
+}
+
+.new_text:active,
+.submit_text:active,
+.solve_text:active
+ {
+    background-color: #025ea8;
+    color: rgb(68, 59, 59);
+}
+
+.creator {
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+}

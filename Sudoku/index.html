@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link href="./assets/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="./styles_mobile.css" media="screen and (max-width: 450px)" rel="stylesheet">
+    <link href="./styles.css" media="screen and (min-width: 450px)" rel="stylesheet">
+</head>
+
+<body>
+    <!-- mobile not allowed -->
+    <div class="mobile" style="display: none; opacity: 0; z-index: -6; ">
+        **NOT supported for this device**
+    </div>
+
+    <!-- game -->
+    <div class="page">
+        <div class="game_container">
+            <div id="game_box">
+
+            </div>
+        </div>
+        <div class="score_board">
+            <div class="title"> Sudoku </div>
+            <div class="score_box">
+                <div class="filled">
+                    Filled -&nbsp;<div class="score score_filled">00</div>
+                </div>
+                <div class="remaining">
+                    Remaining -&nbsp;<div class="score score_remaining">00</div>
+                </div>
+            </div>
+            <div class="submit_solve">
+                <div class="submit_text">
+                    Submit
+                </div>
+                <div class="solve_text">
+                    Solve
+                </div>
+            </div>
+            <div class="new">
+                <div class="new_text">
+                    New
+                </div>
+            </div>
+
+            <div class="creator">
+                CREATED BY nishant
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
