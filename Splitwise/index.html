@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitwise</title>
+    <link href="./assets/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="./styles_mobile.css" media="screen and (max-width: 450px)" rel="stylesheet">
+    <link href="./assets/vis.min.css" media="screen and (min-width: 450px)" rel="stylesheet">
+    <link href="./styles.css" media="screen and (min-width: 450px)" rel="stylesheet">
+</head>
+
+<body>
+    <!-- mobile not allowed -->
+    <div class="mobile" style="display: none; opacity: 0; z-index: -6; ">
+        **NOT supported for this device**
+    </div>
+
+    <!-- game -->
+    <div class="page">
+        <div class="game_container">
+            <div id="game_box"></div>
+        </div>
+        <div class="score_board">
+            <div class="title"> Splitwise </div>
+            <div class="transaction_input">
+                <div class="from_inp_box inp_box">
+                    <input required autofocus autocapitalize="off" autocomplete="off"  
+                    class="inp" placeholder="from" type="text" name="from_inp" 
+                    id="from_inp">
+                    </input>
+                </div>
+                <div class="to_inp_box inp_box">
+                    <input required autocapitalize="off" autocomplete="off"  class="inp" 
+                    placeholder="to" type="text" name="to_inp" id="to_inp">
+                    </input>
+                </div>
+                <div class="amount_box inp_box">
+                    <input required min="1" autocapitalize="off" autocomplete="off" 
+                    class="inp" placeholder="amount" type="number" 
+                    name="amount" id="amount">
+                    </input>
+                </div>
+            </div>
+            <div class="submit_solve">
+                <div class="submit_text">
+                    Add&nbsp;Transaction
+                </div>
+
+                <div class="solve_text">
+                    Split
+                </div>
+            </div>
+
+            <div class="transaction_box">
+                <div class="transactions">                    
+                </div>
+            </div>
+
+            <div class="creator">
+                CREATED BY nishant
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./assets/vis-network.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
