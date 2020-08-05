@@ -1,0 +1,35 @@
+.main-content {
+    word-wrap: break-word;
+    background-color: $background_fade_page;
+    padding: 0 6rem 4rem 6rem;
+    margin: 0 auto;
+    font-size: 2rem
+}
+
+.main-content :first-child {
+    margin-top: 0
+}
+
+
+.main-content img {
+    max-width: 100%
+}
+
+.main-content h1{
+    text-align: center;
+}
+
+.main-content h1,
+.main-content h2{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: $project_txt;
+}
+
+.main-content p {
+    margin-bottom: 1em
+}
+
+
+
