@@ -1,0 +1,35 @@
+{
+  "name": "nishantchauhan00.github.io",
+  "version": "1.0.0",
+  "description": "My Github Page:)",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass -w src/sass/mains.scss src/css/styles.css",
+    "watch:sasslast": "node-sass src/sass/mains.scss src/css/styles.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 5 versions\" src/css/styles.css -o src/css/styles.prefixed.css",
+    "compress:css": "node-sass src/css/styles.prefixed.css src/css/styles.compressed.css --output-style compressed",
+    "build:css": "npm-run-all watch:sasslast prefix:css compress:css",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishantchauhan00/nishantchauhan00.github.io.git"
+  },
+  "author": "nishant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nishantchauhan00/nishantchauhan00.github.io/issues"
+  },
+  "homepage": "https://github.com/nishantchauhan00/nishantchauhan00.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "gulp-concat-css": "^3.1.0",
+    "node-sass": "^4.14.1",
+    "postcss-cli": "^7.1.1"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5"
+  }
+}

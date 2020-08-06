@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- <link rel="stylesheet" href="src\resources\pure-min.css"> -->
-    <!-- <link rel="stylesheet" href="src\resources\normalize.css"> -->
     <!-- <link rel="stylesheet" href="src\css\styles.compressed.css">  -->
     <link rel="stylesheet" href="src\css\styles.css">
     <title>nishant</title>
@@ -24,50 +22,7 @@
             <div class="posts">
                 <h1 class="content-subhead">My Projects</h1>
 
-                <section class="post" >
-                    <a href="https://nishantchauhan00.github.io/Snake_Game/">
-                        <header class="post-header">
-                            <h2 class="post-title">Snake</h2>
-                        </header>
-                        <div class="post-description">
-                            <p>A simple snake game</p>
-                        </div>
-                    </a>
-                </section>
-
-                <section class="post">
-                    <a href="https://nishantchauhan00.github.io/Snake_Game/">
-                        <header class="post-header">
-                            <h2 class="post-title">Snake</h2>
-                        </header>
-                        <div class="post-description">
-                            <p>A simple snake game</p>
-                        </div>
-                    </a>
-                </section>
-                
-                <section class="post">
-                    <a href="https://nishantchauhan00.github.io/Snake_Game/">
-                        <header class="post-header">
-                            <h2 class="post-title">Snake</h2>
-                        </header>
-                        <div class="post-description">
-                            <p>A simple snake game</p>
-                        </div>
-                    </a>
-                </section>
-
-                <section class="post">
-                    <a href="https://nishantchauhan00.github.io/Snake_Game/">
-                        <header class="post-header">
-                            <h2 class="post-title">Snake</h2>
-                        </header>
-                        <div class="post-description">
-                            <p>A simple snake game</p>
-                        </div>
-                    </a>
-                </section>
-                
+                <div class="project_container"></div>
             </div>
         </div>
     </main>
@@ -76,7 +31,22 @@
         <div class="site-footer-owner">A page by nishant</div>
     </footer>
 
+    <template id="project_post_template">
+        <section class="post">
+            <a class="plink" href="https://nishantchauhan00.github.io/Snake_Game/">
+                <header class="post-header">
+                    <h2 class="post-title">--NAME--</h2>
+                </header>
+                <div class="post-description">
+                    <p class="post-description-content">--DESCRIPTION--</p>
+                </div>
+            </a>
+        </section>
+    </template>
 
+
+    <script type="text/javascript" src="./src/script.js"></script>
 </body>
-
 </html>
+
+
