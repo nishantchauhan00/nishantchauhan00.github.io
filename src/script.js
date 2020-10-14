@@ -17,12 +17,13 @@ var showProjects = (data) => {
 
 
 
-fetch("src/project.json").then(response => {
+fetch("https://nishantchauhan00.github.io/src/project.json").then(response => {
     var data = response.json();
+console.log(data.projects);
     showProjects(JSON.parse(data));
 }).catch(err => {
     console.log("Cant fetch file.\nError:" + err);
-    var data = '{\"projects\":{\"Snake Xenia\":{\"description\":\"A classic snake Xenia game\",\"link\":\"https://nishantchauhan00.github.io/Snake_Game\"},\"Sudoku\":{\"description\":\"Sudoku game with solver and checker\",\"link\":\"https://nishantchauhan00.github.io/Sudoku\"},\"Chatbox\":{\"description\":\"Create rooms, chat and leave.\",\"link\":\"https://chatbox-n.herokuapp.com/\"},\"Splitwise\":{\"description\":\"Use spliwise to minimize Cash Flow\",\"link\":\"https://nishantchauhan00.github.io/Splitwise\"},\"Covid Fighter\":{\"description\":\"Protect the hero from coronovirus\",\"link\":\"https://nishantchauhan00.github.io/Covid_Fighter/\"},\"Spin Wheel\":{\"description\":\"Spin the wheel!\",\"link\":\"https://nishantchauhan00.github.io/Spin_Wheel/\"},\"Mario Jump\":{\"description\":\"A mario inspired game\",\"link\":\"https://nishantchauhan00.github.io/Mario_Jump/\"},\"Avengers\":{\"description\":\"Fan Page for marvel\'s first avengers\",\"link\":\"https://nishantchauhan00.github.io/Avengers\"}}}';
+    var data = '{\"projects\":{\"Neural Style Transfer\":{\"description\":\"Transferring style of one image to another image using VGG19(Visual Geometry Group) model.\",\"link\":\"https://github.com/nishantchauhan00/Neural_Style_Transfer\"},\"Face Recognition using Resnet\":{\"description\":\"Face Recognition using Resnet Model. \",\"link\":\"https://github.com/nishantchauhan00/Face-Recognition-using-Resnet\"},\"Splitwise\":{\"description\":\"Use spliwise to minimize Cash Flow\",\"link\":\"https://nishantchauhan00.github.io/Splitwise\"},\"Image Compression with K-Means Clustering\":{\"description\":\"Using K-means algorithm to compress images.  \",\"link\":\"https://github.com/nishantchauhan00/Image_Compression_with_K-Means_Clustering\"},\"Snake Xenia\":{\"description\":\"A classic snake Xenia game\",\"link\":\"https://nishantchauhan00.github.io/Snake_Game\"},\"Sudoku\":{\"description\":\"Sudoku game with solver and checker\",\"link\":\"https://nishantchauhan00.github.io/Sudoku\"},\"Chatbox\":{\"description\":\"Create rooms, chat and leave.\",\"link\":\"https://chatbox-n.herokuapp.com/\"},\"Splitwise\":{\"description\":\"Use spliwise to minimize Cash Flow\",\"link\":\"https://nishantchauhan00.github.io/Splitwise\"},\"Covid Fighter\":{\"description\":\"Protect the hero from coronovirus\",\"link\":\"https://nishantchauhan00.github.io/Covid_Fighter/\"},\"Spin Wheel\":{\"description\":\"Spin the wheel!\",\"link\":\"https://nishantchauhan00.github.io/Spin_Wheel/\"},\"Mario Jump\":{\"description\":\"A mario inspired game\",\"link\":\"https://nishantchauhan00.github.io/Mario_Jump/\"},\"Avengers\":{\"description\":\"Fan Page for marvel\'s first avengers\",\"link\":\"https://nishantchauhan00.github.io/Avengers\"}}}';
     showProjects(JSON.parse(data));    
 });
 
