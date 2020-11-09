@@ -1,8 +1,14 @@
 {
+	"header": "Welcome",
+	"footer": "A page by nishant",
 	"projects": {
 		"Neural Style Transfer": {
 			"description": "Transferring style of one image to another image using VGG19(Visual Geometry Group) model.",
 			"link": "https://github.com/nishantchauhan00/Neural_Style_Transfer"
+		},
+		"Accounts API": {
+			"description": "MERN app for storing doing CRUD on user accounts and login & signup",
+			"link": "https://github.com/nishantchauhan00/accounts-api"
 		},
 		"Face Recognition using Resnet": {
 			"description": "Face Recognition using Resnet Model. ",

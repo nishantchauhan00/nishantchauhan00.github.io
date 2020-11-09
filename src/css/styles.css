@@ -22,7 +22,7 @@ body {
 
 .heading_text {
   margin-top: 0;
-  padding: 2rem 0; }
+  padding: 1.4rem 0; }
 
 .main-content {
   word-wrap: break-word;
@@ -78,7 +78,7 @@ a {
 .post-description {
   font-family: Georgia, "Cambria", serif;
   color: #444;
-  line-height: 1.8em; }
+  line-height: 1.5em; }
 
 .site-footer {
   position: fixed;
@@ -91,7 +91,7 @@ a {
   background-image: linear-gradient(120deg, #181818, #191919); }
 
 .site-footer-owner {
-  padding: 1.6rem 0;
+  padding: 1.3rem 0;
   display: block;
   font-weight: bold;
   color: rgba(16, 16, 194, 0.993); }
