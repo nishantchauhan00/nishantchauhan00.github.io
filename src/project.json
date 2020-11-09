@@ -30,10 +30,6 @@
 			"description": "Sudoku game with solver and checker",
 			"link": "https://nishantchauhan00.github.io/Sudoku"
 		},
-		"Chatbox": {
-			"description": "Create rooms, chat and leave.",
-			"link": "https://chatbox-n.herokuapp.com/"
-		},
 		"Covid Fighter": {
 			"description": "Protect the hero from coronovirus",
 			"link": "https://nishantchauhan00.github.io/Covid_Fighter/"
